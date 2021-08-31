@@ -49,3 +49,7 @@
 .weekly-temp {
   font-size: 15px;
 }
+.author-line {
+  text-align: center;
+  padding: 0, 10px;
+}
