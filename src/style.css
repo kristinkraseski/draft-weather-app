@@ -1,0 +1,51 @@
+.card {
+  font-family: "Goldman", cursive;
+  padding: 30px 30px 0px 30px;
+  margin: 50px 250px;
+}
+.current-temp {
+  font-size: 120px;
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+.degree-symbol {
+  font-size: 20px;
+  position: relative;
+  top: -110px;
+  left: 210px;
+  z-index: 9999999;
+}
+.current-weather {
+  font-size: 160px;
+
+  text-align: center;
+  position: relative;
+  top: -280px;
+  left: 20px;
+}
+.current-city {
+  font-size: 25px;
+  position: relative;
+  top: -20px;
+  left: 70px;
+}
+
+.weather-details {
+  font-size: 15px;
+  text-align: right;
+  position: relative;
+  top: -290px;
+  left: -270px;
+}
+.row {
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+  position: relative;
+  top: -170px;
+  left: 50px;
+}
+.weekly-temp {
+  font-size: 15px;
+}

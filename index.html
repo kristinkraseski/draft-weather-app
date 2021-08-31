@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ee9ff93b58.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form id="search-form">
+            <input type="text" id="city-input" placeholder="Enter a city..." />
+            <input type="submit" name="Search" />
+          </form>
+          <button id="coordinate-temp-button">Current Location</button>
+          <br />
+          <div class="current-temp" id="current-temp">82</div>
+          <div class="degree-symbol">
+            <span class="degree-symbol-f">
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+            |
+            <span class="degree-symbol-c">
+              <a href="#" id="celsius-link">°C</a>
+            </span>
+          </div>
+
+          <br />
+          <div class="current-city" id="current-city">New York</div>
+          <div class="current-time" id="current-time">Sunday 3:00pm</div>
+          <div class="current-weather">⛅️</div>
+          <div class="weather-details">
+            <div>Precipitation: 9%</div>
+            <div>Wind Speed: 6km/hr</div>
+          </div>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-2">
+              Mon
+              <div class="mon-weather">🌤</div>
+              <div class="weekly-temp">88°</div>
+            </div>
+            <div class="col-2">
+              Tue
+              <div class="tue-weather">⛈</div>
+              <div class="weekly-temp">78°</div>
+            </div>
+            <div class="col-2">
+              Wed
+              <div class="wed-weather">☀️</div>
+              <div class="weekly-temp">92°</div>
+            </div>
+            <div class="col-2">
+              Thu
+              <div class="thu-weather">🌤</div>
+              <div class="weekly-temp">85°</div>
+            </div>
+            <div class="col-2">
+              Fri
+              <div class="fri-weather">🌤</div>
+              <div class="weekly-temp">83°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
