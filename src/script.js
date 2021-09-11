@@ -46,8 +46,10 @@ function displayTemperature(response) {
   let showTemp = document.querySelector("#current-temp");
   let cityEntered = response.data.name;
   let temperature = Math.round(response.data.main.temp);
+  let descriptionElement = document.querySelector("#current-description");
   showCityName.innerHTML = `${cityEntered}`;
   showTemp.innerHTML = `${temperature}`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function searchCity(city) {
