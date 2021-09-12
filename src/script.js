@@ -96,17 +96,20 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let currentTemp = document.querySelector("#current-temp");
 
-function convertFahrenheit(event) {
+function convertToFahrenheit(event) {
   event.preventDefault();
-
+  degreeFahrenheit.classList.add("active");
+  degreeCelsius.classList.remove("active");
   currentTemp.innerHTML = fahrenheitTemperature;
 }
 
 let degreeFahrenheit = document.querySelector("#fahrenheit-link");
-degreeFahrenheit.addEventListener("click", convertFahrenheit);
+degreeFahrenheit.addEventListener("click", convertToFahrenheit);
 
 function convertToCelsius(event) {
   event.preventDefault();
+  degreeFahrenheit.classList.remove("active");
+  degreeCelsius.classList.add("active");
   let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
   currentTemp.innerHTML = celsiusTemperature;
 }
