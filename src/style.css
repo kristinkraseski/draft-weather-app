@@ -4,6 +4,11 @@
   margin: 50px 250px;
   border-radius: 10px;
 }
+
+.description-list {
+  list-style: none;
+}
+
 .current-temp {
   font-size: 120px;
   position: relative;
@@ -32,9 +37,14 @@
   left: 70px;
 }
 
+.current-description {
+  text-transform: capitalize;
+}
+
 .weather-details {
   font-size: 15px;
   text-align: right;
+  list-style: none;
   position: relative;
   top: -290px;
   left: -270px;
