@@ -69,7 +69,6 @@ function searchCity(city) {
     .then(displayTemperature);
 }
 
-//Current Location Button - this is the bonus challenge
 function showPosition(position) {
   let apiKey = "eb4def79ec4de7a8430e27e8b5eefa1f";
   let apiUrl = "https://api.openweathermap.org/data/2.5/weather?";
