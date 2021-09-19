@@ -31,7 +31,7 @@ function displayCity(event) {
   searchCity(city);
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -55,6 +55,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "eb4def79ec4de7a8430e27e8b5eefa1f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 //Display current temperature of city entered in the form
 function displayTemperature(response) {
   let showCityName = document.querySelector("#current-city");
@@ -77,6 +84,8 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -138,5 +147,3 @@ cityForm.addEventListener("submit", displayCity);
 
 let degreeCelsius = document.querySelector("#celsius-link");
 degreeCelsius.addEventListener("click", convertToCelsius);
-
-displayForecast();
