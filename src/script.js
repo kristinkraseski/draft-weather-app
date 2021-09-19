@@ -1,5 +1,3 @@
-// Update day and time on page refresh
-
 function updateDate(date) {
   let hour = date.getHours();
   if (hour < 10) {
@@ -23,10 +21,6 @@ function updateDate(date) {
   return `${day} ${hour}:${minutes}`;
 }
 
-let displayDate = document.querySelector("#current-time");
-let currentTime = new Date();
-displayDate.innerHTML = updateDate(currentTime);
-
 //Display city name entered in form on page
 
 function displayCity(event) {
@@ -37,8 +31,29 @@ function displayCity(event) {
   searchCity(city);
 }
 
-let cityForm = document.querySelector("#search-form");
-cityForm.addEventListener("submit", displayCity);
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="forecast-day">${day}</div>
+      <div class="forecast-icon">☁︎</div>
+      <div class="forecast-temperatures">
+        <span class="forecast-temp-max">79°</span>
+        <span class="forecast-temp-min">59°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 //Display current temperature of city entered in the form
 function displayTemperature(response) {
@@ -114,5 +129,14 @@ function convertToCelsius(event) {
   currentTemp.innerHTML = celsiusTemperature;
 }
 
+let displayDate = document.querySelector("#current-time");
+let currentTime = new Date();
+displayDate.innerHTML = updateDate(currentTime);
+
+let cityForm = document.querySelector("#search-form");
+cityForm.addEventListener("submit", displayCity);
+
 let degreeCelsius = document.querySelector("#celsius-link");
 degreeCelsius.addEventListener("click", convertToCelsius);
+
+displayForecast();
