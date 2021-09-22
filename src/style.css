@@ -69,11 +69,12 @@
   margin: 0;
   position: relative;
   top: -170px;
-  left: 50px;
+  left: 0;
 }
 .weekly-temp {
   font-size: 15px;
 }
+
 .author-line {
   text-align: center;
   padding: 0px;
