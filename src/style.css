@@ -55,6 +55,11 @@
   text-transform: capitalize;
 }
 
+.current-time {
+  position: relative;
+  left: 30px;
+}
+
 .weather-details {
   font-size: 15px;
   text-align: right;
