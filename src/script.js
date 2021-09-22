@@ -139,30 +139,9 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let currentTemp = document.querySelector("#current-temp");
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  degreeFahrenheit.classList.add("active");
-  degreeCelsius.classList.remove("active");
-  currentTemp.innerHTML = fahrenheitTemperature;
-}
-
-let degreeFahrenheit = document.querySelector("#fahrenheit-link");
-degreeFahrenheit.addEventListener("click", convertToFahrenheit);
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  degreeFahrenheit.classList.remove("active");
-  degreeCelsius.classList.add("active");
-  let celsiusTemperature = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
-  currentTemp.innerHTML = celsiusTemperature;
-}
-
 let displayDate = document.querySelector("#current-time");
 let currentTime = new Date();
 displayDate.innerHTML = updateDate(currentTime);
 
 let cityForm = document.querySelector("#search-form");
 cityForm.addEventListener("submit", displayCity);
-
-let degreeCelsius = document.querySelector("#celsius-link");
-degreeCelsius.addEventListener("click", convertToCelsius);
