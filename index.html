@@ -32,8 +32,9 @@
             <input type="text" id="city-input" placeholder="Enter a city..." />
             <input type="submit" name="Search" />
           </form>
-
           <br />
+          <div class="current-time" id="current-time"></div>
+
           <div class="current-temp" id="current-temp">00</div>
           <div class="degree-symbol">
             <span class="degree-symbol-f">
@@ -46,13 +47,8 @@
             <li>
               <div class="current-city" id="current-city"></div>
             </li>
-            <li>
-              <div class="current-description" id="current-description">
-                Weather Description
-              </div>
-            </li>
           </ul>
-          <div class="current-time" id="current-time">Sunday 3:00pm</div>
+
           <div class="current-weather">
             <img
               src="https://openweathermap.org/img/wn/10d@2x.png"
@@ -62,6 +58,11 @@
             />
           </div>
           <ul class="weather-details">
+            <li>
+              <div class="current-description" id="current-description">
+                Weather Description
+              </div>
+            </li>
             <li>Humidity: <span id="current-humidity"></span>%</li>
             <li>Wind Speed: <span id="current-wind"></span> m/hr</li>
           </ul>

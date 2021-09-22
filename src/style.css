@@ -13,7 +13,7 @@
   font-size: 120px;
   position: relative;
   top: 20px;
-  left: 50px;
+  left: 40px;
 }
 .degree-symbol {
   font-size: 20px;
@@ -41,7 +41,7 @@
   text-align: center;
   position: relative;
   margin-bottom: 0;
-  top: -380px;
+  top: -340px;
   left: 20px;
 }
 .current-city {
@@ -57,7 +57,7 @@
 
 .current-time {
   position: relative;
-  left: 30px;
+  left: 0;
 }
 
 .weather-details {
@@ -76,6 +76,19 @@
   top: -170px;
   left: 0;
 }
+
+.forecast-temperatures {
+  font-size: 15px;
+}
+
+.forecast-temp-max {
+  font-weight: bolder;
+}
+
+.forecast-temp-min {
+  font-weight: lighter;
+}
+
 .weekly-temp {
   font-size: 15px;
 }
