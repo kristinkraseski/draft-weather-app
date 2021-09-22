@@ -31,24 +31,43 @@ function displayCity(event) {
   searchCity(city);
 }
 
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let forecastDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  forecastDays.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-      <div class="forecast-day">${day}</div>
-      <div class="forecast-icon">☁︎</div>
+      <div class="forecast-day">${formatForecastDay(forecastDay.dt)}</div>
+      <img
+      src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
+      />
       <div class="forecast-temperatures">
-        <span class="forecast-temp-max">79°</span>
-        <span class="forecast-temp-min">59°</span>
+        <span class="forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
+        <span class="forecast-temp-min">${Math.round(
+          forecastDay.temp.min
+        )}°</span>
       </div>
     </div>
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
