@@ -92,6 +92,7 @@
 
 .forecast-temp-min {
   font-weight: lighter;
+  color: gray;
 }
 
 .weekly-temp {
