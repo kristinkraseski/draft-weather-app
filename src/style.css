@@ -6,6 +6,10 @@
   border-radius: 10px;
 }
 
+.card-body {
+  height: 750px;
+}
+
 .description-list {
   list-style: none;
 }
@@ -93,6 +97,10 @@
 
 .weekly-temp {
   font-size: 15px;
+}
+
+.weather-forecast {
+  height: 2px;
 }
 
 .author-line {
