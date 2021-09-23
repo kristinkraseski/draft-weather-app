@@ -127,6 +127,14 @@ function showPosition(position) {
     .then(displayTemperature);
 }
 
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let currentLocationButton = document.querySelector("#coordinate-temp-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 //Fahrenheit to Celsius Converter
 
 let currentTemp = document.querySelector("#current-temp");

@@ -32,6 +32,7 @@
             <input type="text" id="city-input" placeholder="Enter a city..." />
             <input type="submit" name="Search" />
           </form>
+          <button id="coordinate-temp-button">Current Location</button>
           <br />
           <div class="current-time" id="current-time"></div>
           <div class="col-6">
@@ -40,6 +41,16 @@
               <span class="degree-symbol-f">
                 <a href="#" id="fahrenheit-link" class="active">°F</a>
               </span>
+              <div class="col-6">
+                <div class="current-weather">
+                  <img
+                    src="https://openweathermap.org/img/wn/10d@2x.png"
+                    alt=""
+                    srcset=""
+                    id="icon"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <br />
@@ -49,14 +60,6 @@
             </li>
           </ul>
 
-          <div class="current-weather">
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt=""
-              srcset=""
-              id="icon"
-            />
-          </div>
           <ul class="weather-details">
             <li>
               <div class="current-description" id="current-description">
