@@ -6,10 +6,6 @@
   border-radius: 10px;
 }
 
-.card-body {
-  height: 700px;
-}
-
 .description-list {
   list-style: none;
 }
@@ -103,5 +99,4 @@
   text-align: center;
   padding: 0px;
   margin: 0px;
-  z-index: 9999999;
 }
